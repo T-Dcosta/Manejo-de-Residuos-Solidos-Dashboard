@@ -1,0 +1,30 @@
+---
+title: "Trabalho de Saneamento e Manejo de Resíduos Sólidos"
+format: 
+  dashboard:
+    theme:
+      light: pulse
+      dark: darkly
+    embed-resources: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: setup
+#| warning: false
+#| message: false
+#| echo: false
+
+library(readxl)
+library(ggplot2)
+library(tidyr)
+library(tibble)
+library(scales)
+library(tidyverse)
+
+# Carregamento da base de dados geral externa
+dados <- read_excel(
+  "SINISA_RESIDUOS_planilhas_2024/SINISA_RESIDUOS_Informacoes_Formulario_Manejo_2024.xlsx", 
+  skip = 12
+)
